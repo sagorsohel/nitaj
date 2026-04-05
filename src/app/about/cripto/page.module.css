@@ -1,0 +1,178 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 20px;
+  background-color: #0A0A0A;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.mainTitle {
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 104%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+  max-width: 800px;
+}
+
+.titleWhite {
+  color: #FFFFFF;
+}
+
+.titleGrey {
+  color: #888888;
+}
+
+.card {
+  width: 1216px;
+  height: 666px;
+  background: rgba(19, 19, 19, 1);
+  border: 1px solid rgba(29, 29, 29, 1);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: row;
+  padding: 80px 80px 0 80px; /* Removed bottom padding */
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1250px) {
+  .card {
+     width: 100%;
+     height: auto;
+     flex-direction: column;
+     padding: 40px 20px;
+  }
+}
+
+.leftCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.stepCircle {
+  width: 61px;
+  height: 60px;
+  border-radius: 47.59px;
+  border: 1.03px solid rgba(255, 190, 0, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 240px; /* Exact as per figma layout feeling */
+}
+
+@media (max-width: 1250px) {
+  .stepCircle {
+    margin-bottom: 40px;
+  }
+}
+
+.stepNumber {
+  color: rgba(255, 190, 0, 1);
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 104%;
+  letter-spacing: -4%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.headline {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-weight: 400; /* As requested explicitly */
+  font-size: 48px;
+  line-height: 116%;
+  letter-spacing: -2%;
+  margin: 0;
+}
+
+.yellowText {
+  color: white !important;
+}
+
+.whiteText {
+  color: rgba(153, 153, 153, 1) !important;
+}
+
+.description {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 148%;
+  letter-spacing: 0%;
+  color: rgba(153, 153, 153, 1);
+  margin: 0;
+  max-width: 440px;
+}
+
+.rightCol {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Changed from flex-end to control from top */
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.mockupContainer {
+  position: relative;
+  width: 363.43px;
+  height: 732px;
+  /* top and left from figma suggests relative placement in a container */
+}
+
+@media (max-width: 1250px) {
+  .mockupContainer {
+    width: 280px;
+    height: auto;
+    margin: 40px auto 0;
+  }
+}
+
+.phoneFrame {
+  
+ 
+  object-fit: contain;
+    width: 363.43px;
+    height: 686px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+
+.walletIconWrapper {
+  position: absolute;
+  width: 270px;
+  height: 268px;
+  left: -132px;
+  top: 257px;
+  z-index: 3;
+}
+
+.walletIcon {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1250px) {
+  .walletIconWrapper {
+    width: 180px;
+    left: -100px;
+  }
+}
