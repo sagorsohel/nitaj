@@ -146,41 +146,48 @@
 .ctaButton {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  background-color: #FFB300;
-  color: #000;
-  font-size: 0.9rem;
-  font-weight: 700;
-  padding: 0.45rem 0.45rem 0.45rem 1.7rem;
-  border-radius: 9999px;
-  border: none;
-  cursor: pointer;
+  width: 300px;
+  height: 60px;
+  gap: 14px;
+  background-color: rgba(255, 190, 0, 1);
+  border: 1px solid rgba(255, 234, 173, 1);
+  border-radius: 60px;
+  padding: 8px 8px 8px 40px;
+  font-family: "Gilroy-Bold", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: normal;
+  color: rgba(29, 29, 29, 1);
   text-transform: uppercase;
-  transition: transform 0.2s ease, background-color 0.2s ease, outline-color 0.2s ease;
-  outline: 2px solid #FFB300;
-  outline-offset: 3px;
-  width: fit-content;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-sizing: border-box;
+  justify-content: space-between;
+  white-space: nowrap;
 }
+
 
 .ctaButton:hover {
   transform: translateY(-2px);
   background-color: #FFC107;
-  outline-color: #FFC107;
 }
 
 .iconCircle {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  color: #000;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  background-color: rgba(255, 234, 173, 1);
+  border-radius: 40px;
+  color: rgba(29, 29, 29, 1);
 }
 
 .iconCircle svg {
-  width: 14px;
-  height: 14px;
-  stroke-width: 2;
+  width: 20px;
+  height: 20px;
+  stroke-width: 3;
 }
+
+

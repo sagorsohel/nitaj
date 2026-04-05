@@ -8,8 +8,8 @@ export default function CTASection() {
         <Image
           src="/cta-top.png"
           alt="Decorative ornament top"
-          width={380}
-          height={380}
+          width={300}
+          height={300}
           className={styles.topImage}
         />
         
@@ -43,10 +43,11 @@ export default function CTASection() {
         <Image
           src="/cta-bottom.png"
           alt="Decorative ornament bottom"
-          width={500}
-          height={500}
+          width={400}
+          height={400}
           className={styles.bottomImage}
         />
+
       </div>
     </section>
   );
