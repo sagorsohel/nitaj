@@ -267,27 +267,43 @@
 .readMoreBtn {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  width: 218px;
+  height: 60px;
   background-color: rgba(255, 190, 0, 1);
-  color: #000000;
+  color: rgba(29, 29, 29, 1);
   font-family: "Gilroy-Bold", sans-serif;
-  font-size: 16px;
-  padding: 12px 24px;
-  border-radius: 60px;
-  width: fit-content;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 6px 6px 6px 32px;
+  border-radius: 68.61px;
   border: none;
   cursor: pointer;
   margin-bottom: 32px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.readMoreBtn:hover {
+  background-color: rgba(255, 200, 30, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 190, 0, 0.3);
 }
 
 .arrowIcon {
-  width: 32px;
-  height: 32px;
-  background: #FFFFFF;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 248, 224, 1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: rgba(29, 29, 29, 1);
+  transition: transform 0.3s ease;
+}
+
+.readMoreBtn:hover .arrowIcon {
+  transform: translate(4px, -4px);
 }
 
 .blogImageWrapper {
