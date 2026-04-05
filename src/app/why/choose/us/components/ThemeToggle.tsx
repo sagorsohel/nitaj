@@ -20,7 +20,7 @@ export default function ThemeToggle() {
       setTheme('dark');
       document.documentElement.setAttribute('data-theme', 'dark');
     }
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';

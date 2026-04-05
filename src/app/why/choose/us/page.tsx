@@ -3,6 +3,7 @@ import { Montserrat } from 'next/font/google';
 import styles from './page.module.css';
 import Features from './components/Features';
 import ConfidentTrading from './components/ConfidentTrading';
+import CTASection from './components/CTASection';
 import ThemeToggle from './components/ThemeToggle';
 
 const montserrat = Montserrat({
@@ -62,6 +63,7 @@ export default function WhyChooseUsPage() {
       </div>
       <Features />
       <ConfidentTrading />
+      <CTASection />
       <ThemeToggle />
     </>
   );
