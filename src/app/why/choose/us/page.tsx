@@ -58,7 +58,7 @@ export default function WhyChooseUsPage() {
             priority
           />
         </div>
-        <div className={styles.bottomBar}></div>
+
       </div>
       <Features />
       <ConfidentTrading />
