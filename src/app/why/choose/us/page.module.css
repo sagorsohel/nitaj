@@ -1,0 +1,132 @@
+.heroSection {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8rem; /* Matches distance from top */
+  overflow: hidden;
+  background-color: #171717; /* Exact dark grey from image */
+  height: 100vh;
+}
+
+@media (prefers-color-scheme: light) {
+  .heroSection {
+    background-color: #F8F8F8;
+  }
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  line-height: 1.15;
+  letter-spacing: 0.12em; /* Gives the slightly wide look */
+  margin-bottom: 0.5rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .title {
+    color: #111111;
+  }
+}
+
+.titleGrey {
+  color: #888888;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-weight: 400;
+  color: #888888; /* Soft grey from image */
+  margin-top: 1rem;
+  margin-bottom: 3.5rem; /* Gap to button */
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  z-index: 15;
+}
+
+.ctaButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #FFB300; /* Match gold/yellow hue */
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.45rem 0.45rem 0.45rem 1.7rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, background-color 0.2s ease, outline-color 0.2s ease;
+  outline: 2px solid #FFB300;
+  outline-offset: 3px; /* Creates the transparent ring gap */
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  background-color: #FFC107;
+  outline-color: #FFC107;
+}
+
+.iconCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; /* White circle size */
+  height: 32px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  color: #000;
+}
+
+.iconCircle svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2;
+}
+
+.imageContainer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  z-index: 2;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  /* Push coins down slightly if needed to look cropped, or natural fit if large */
+  margin-bottom: -5%; /* Approximate crop offset to match screenshot */
+}
+
+.bottomBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh; /* The solid bottom panel exactly matching screenshot */
+  background-color: #121212;
+  z-index: 5; /* Overlays the bottom of the coins to slice them */
+}
