@@ -30,9 +30,10 @@
 .stepsWrapper {
   display: flex;
   flex-direction: column;
-  gap: 80px; /* Space between cards */
+  gap: 80px;
   width: 100%;
   align-items: center;
+  margin-bottom: 200px;
 }
 
 .card {
@@ -74,7 +75,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 120px; /* Adjusted from 240 to fit height */
+  margin-bottom: 120px;
 }
 
 @media (max-width: 1250px) {
@@ -178,4 +179,127 @@
     width: 180px;
     left: -100px !important;
   }
+}
+
+
+/* Insights Section Styles */
+.insightsSection {
+  width: 1216px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+@media (max-width: 1250px) {
+  .insightsSection {
+    width: 100%;
+  }
+}
+
+.insightsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 389px);
+  gap: 24px;
+}
+
+@media (max-width: 1250px) {
+  .insightsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .insightsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.insightCard {
+  width: 389px;
+  height: 520px; /* Slightly taller for padding */
+  border-radius: 16px;
+  background: linear-gradient(161.42deg, rgba(18, 18, 18, 0.7) 12.58%, rgba(68, 32, 0, 0.322) 130.9%);
+  backdrop-filter: blur(80px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+@media (max-width: 1250px) {
+  .insightCard {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.tag {
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 400;
+  font-size: 16px;
+  color: #D3D3D3;
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cardTitle {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 136%;
+  letter-spacing: -2%;
+  color: rgba(226, 226, 226, 1);
+  margin: 0;
+}
+
+.readMoreBtn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: rgba(255, 190, 0, 1);
+  color: #000000;
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 60px;
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 32px;
+}
+
+.arrowIcon {
+  width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blogImageWrapper {
+  margin-top: auto;
+  width: 100%;
+}
+
+.blogImage {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  background: rgba(0, 0, 0, 0.24);
+  background-blend-mode: multiply;
 }

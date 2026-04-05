@@ -45,6 +45,27 @@ const steps = [
   },
 ];
 
+const insightsData = [
+  {
+    id: 1,
+    tag: "Crypto Guide",
+    title: "Understanding the Basics of Crypto Trading",
+    image: "/blog1.png",
+  },
+  {
+    id: 2,
+    tag: "Crypto Guide",
+    title: "Top Crypto Market Trends to Watch This Year Of 2026",
+    image: "/Card Image (1).png",
+  },
+  {
+    id: 3,
+    tag: "Crypto Guide",
+    title: "Smart Strategies for Successful Crypto Trades",
+    image: "/Card Image.png",
+  },
+];
+
 export default function CriptoPage() {
   return (
     <div id="cripto-page" className={styles.container}>
@@ -101,6 +122,43 @@ export default function CriptoPage() {
           </div>
         ))}
       </div>
+
+      <section className={styles.insightsSection}>
+        <h2 className={styles.mainTitle}>
+          <span className={styles.titleWhite}>CRYPTO</span> <br /> 
+          <span className={styles.titleGrey}>INSIGHTS</span>
+        </h2>
+
+        <div className={styles.insightsGrid}>
+          {insightsData.map((blog) => (
+            <div key={blog.id} className={styles.insightCard}>
+              <div className={styles.cardHeader}>
+                <span className={styles.tag}>{blog.tag}</span>
+                <h3 className={styles.cardTitle}>{blog.title}</h3>
+              </div>
+              
+              <button className={styles.readMoreBtn}>
+                Read More 
+                <span className={styles.arrowIcon}>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 13L13 1M13 1H4.5M13 1V9.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+
+              <div className={styles.blogImageWrapper}>
+                <Image 
+                  src={blog.image} 
+                  alt={blog.title} 
+                  width={341} 
+                  height={180}
+                  className={styles.blogImage}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
