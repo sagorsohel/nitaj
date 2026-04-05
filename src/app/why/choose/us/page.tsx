@@ -17,8 +17,8 @@ export default function WhyChooseUsPage() {
     <>
       <div className={`${styles.heroSection} ${montserrat.className}`}>
         <div className={styles.heroContent}>
-          <h1 className={styles.title}>
-            THE SMARTER WAY TO
+          <h1 className={styles.mainTitle}>
+            <span className={styles.titleWhite}>THE SMARTER WAY TO</span>
             <br />
             <span className={styles.titleGrey}>TRADE CRYPTO</span>
           </h1>
@@ -52,10 +52,9 @@ export default function WhyChooseUsPage() {
           <Image
             src="/ethereum-bitcoin-conversion-3d-illustration 1.png"
             alt="Crypto Trading"
-            width={1000}
-            height={600}
+            width={1200}
+            height={800}
             className={styles.heroImage}
-            style={{ width: '100%', height: 'auto' }}
             priority
           />
         </div>

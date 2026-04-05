@@ -25,14 +25,19 @@
   padding: 0 1rem;
 }
 
-.title {
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 800;
+.mainTitle {
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5vw, 56px);
+  line-height: 104%;
+  text-align: center;
   text-transform: uppercase;
+  margin-bottom: 16px;
+  max-width: 800px;
+}
+
+.titleWhite {
   color: #FFFFFF;
-  line-height: 1.15;
-  letter-spacing: 0.12em; /* Gives the slightly wide look */
-  margin-bottom: 0.5rem;
 }
 
 @media (prefers-color-scheme: light) {
@@ -46,13 +51,16 @@
 }
 
 .subtitle {
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-family: "Gilroy-Regular", sans-serif;
   font-weight: 400;
-  color: #888888; /* Soft grey from image */
+  font-size: 20px;
+  line-height: 148%;
+  letter-spacing: 0%;
+  color: rgba(153, 153, 153, 1);
   margin-top: 1rem;
-  margin-bottom: 3.5rem; /* Gap to button */
-  line-height: 1.6;
+  margin-bottom: 3.5rem; 
   max-width: 600px;
+  text-align: center;
 }
 
 .buttonContainer {
@@ -113,27 +121,21 @@
 .imageContainer {
   position: absolute;
   bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   display: flex;
   justify-content: center;
-  width: 100%;
-  max-width: 800px;
   z-index: 2;
+  pointer-events: none;
 }
 
 .heroImage {
   width: 100%;
+  max-width: 1200px; /* Scaled to fit hero well */
   height: auto;
   object-fit: contain;
-  /* Push coins down slightly if needed to look cropped, or natural fit if large */
-  margin-bottom: -5%; /* Approximate crop offset to match screenshot */
+  /* margin-bottom: -30px; Slices the coins at the bottom */
 }
 
-.bottomBar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 10vh; /* The solid bottom panel exactly matching screenshot */
-  background-color: #121212;
-  z-index: 5; /* Overlays the bottom of the coins to slice them */
-}
+
